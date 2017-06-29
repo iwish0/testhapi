@@ -1,4 +1,5 @@
 'use strict';
+ var port = process.env['PORT'] || 8080; 
 
 const Hapi = require('hapi');
 
@@ -6,7 +7,7 @@ const Hapi = require('hapi');
 const server = new Hapi.Server();
 server.connection({ 
     host: 'localhost', 
-    port: 8080 
+    port:port
 });
 
 // Add the route
